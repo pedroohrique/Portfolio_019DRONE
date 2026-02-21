@@ -46,8 +46,8 @@ const Hero = () => {
                         <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
                         <div className="relative h-[400px] md:h-[550px] w-full rounded-2xl overflow-hidden shadow-2xl">
                             <Image
-                                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1470&auto=format&fit=crop"
-                                alt="High-end house with drone"
+                                src="https://images.unsplash.com/photo-1624314138470-5a2f24623f10?q=80&w=1474&auto=format&fit=crop"
+                                alt="Modern luxury house aerial view"
                                 fill
                                 className="object-cover transform group-hover:scale-105 transition-transform duration-700"
                                 priority
