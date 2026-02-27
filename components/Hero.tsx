@@ -1,9 +1,39 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { MessageSquare, Check, Clock } from "lucide-react";
 
+const heroImages = [
+    {
+        src: "/images/hero/hero-1.jpg",
+        alt: "Drone view 1 - Profissional"
+    },
+    {
+        src: "/images/hero/hero-2.jpg",
+        alt: "Drone view 2 - Panorama"
+    },
+    {
+        src: "/images/hero/hero-3.jpg",
+        alt: "Drone view 3 - Detalhes"
+    },
+    {
+        src: "/images/hero/hero-4.jpg",
+        alt: "Drone view 4 - Cinematic"
+    }
+];
+
 const Hero = () => {
+    const [currentImage, setCurrentImage] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentImage((prev) => (prev + 1) % heroImages.length);
+        }, 5000);
+        return () => clearInterval(timer);
+    }, []);
+
     return (
         <section className="py-20 md:py-32 overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 md:px-8">
@@ -41,18 +71,38 @@ const Hero = () => {
                         </div>
                     </div>
 
-                    {/* Right Image */}
+                    {/* Right Image Carousel */}
                     <div className="relative group lg:ml-10">
                         <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
                         <div className="relative h-[400px] md:h-[550px] w-full rounded-2xl overflow-hidden shadow-2xl">
-                            <Image
-                                src="https://images.unsplash.com/photo-1501979376754-2ff867a4f659?q=80&w=1470&auto=format&fit=crop"
-                                alt="Vista aérea urbana de alta altitude"
-                                fill
-                                className="object-cover transform group-hover:scale-105 transition-transform duration-700"
-                                priority
-                            />
+                            {heroImages.map((image, index) => (
+                                <div
+                                    key={index}
+                                    className={`absolute inset-0 transition-opacity duration-1000 ${index === currentImage ? "opacity-100" : "opacity-0"
+                                        }`}
+                                >
+                                    <Image
+                                        src={image.src}
+                                        alt={image.alt}
+                                        fill
+                                        className="object-cover transform scale-100 group-hover:scale-105 transition-transform duration-700"
+                                        priority={index === 0}
+                                    />
+                                </div>
+                            ))}
                             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+
+                            {/* Indicators */}
+                            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                                {heroImages.map((_, index) => (
+                                    <button
+                                        key={index}
+                                        onClick={() => setCurrentImage(index)}
+                                        className={`w-2 h-2 rounded-full transition-all ${index === currentImage ? "bg-white w-6" : "bg-white/50"
+                                            }`}
+                                    />
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -62,3 +112,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
