@@ -15,7 +15,7 @@ export const portfolioData: Property[] = [
         title: "Edifício Corporativo",
         location: "Galleria Office Park",
         city: "Campinas",
-        image: "/images/galleria.jpg", // Substitua por sua imagem do Galleria
+        image: "https://img.youtube.com/vi/sg9oeJ3a7-Y/maxresdefault.jpg", 
         videoUrl: "https://www.youtube.com/watch?v=sg9oeJ3a7-Y",
         description: "Fachada em ângulo superior e entorno urbano para apresentação institucional de empresa.",
     },

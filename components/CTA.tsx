@@ -16,7 +16,7 @@ const CTA = () => {
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                     <Link
-                        href="https://wa.me/5519992805493"
+                        href="https://wa.me/5519992805493?text=Ol%C3%A1%21+Vim+atrav%C3%A9s+do+site+e+gostaria+de+mais+informa%C3%A7%C3%B5es."
                         target="_blank"
                         className="inline-flex flex-1 sm:flex-none justify-center items-center gap-4 bg-green-600 hover:bg-green-700 text-white px-10 py-6 rounded-2xl text-xl font-black shadow-2xl shadow-green-200 transition-all hover:scale-105 active:scale-95 group"
                     >
