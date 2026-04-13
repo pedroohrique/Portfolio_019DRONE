@@ -7,19 +7,19 @@ import { MessageSquare, Check, Clock } from "lucide-react";
 
 const heroImages = [
     {
-        src: "/images/hero/caravela-2.jpg",
+        src: "https://res.cloudinary.com/deazur8hn/image/upload/v1776109850/DJI_20260316180836_0152_D_avfruv.jpg",
         alt: "Caravela"
     },
     {
-        src: "/images/hero/castelo-2.jpg",
+        src: "https://res.cloudinary.com/deazur8hn/image/upload/v1776109850/DJI_20260303220607_0166_D_aih5lc.jpg",
         alt: "Castelo"
     },
     {
-        src: "/images/hero/hotel.jpg",
+        src: "https://res.cloudinary.com/deazur8hn/image/upload/v1776109850/hotel-2_peyvcf.jpg",
         alt: "Hotel"
     },
     {
-        src: "/images/hero/trecime-2.jpg",
+        src: "https://res.cloudinary.com/deazur8hn/image/upload/v1776109850/trecime-2-2_j7zcbd.jpg",
         alt: "Tre Cime"
     }
 ];
