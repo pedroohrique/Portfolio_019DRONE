@@ -7,11 +7,11 @@ import { MessageSquare, Check, Clock } from "lucide-react";
 
 const heroImages = [
     {
-        src: "/images/hero/caravela.jpg",
+        src: "/images/hero/caravela-2.jpg",
         alt: "Caravela"
     },
     {
-        src: "/images/hero/castelo.jpg",
+        src: "/images/hero/castelo-2.jpg",
         alt: "Castelo"
     },
     {
@@ -19,7 +19,7 @@ const heroImages = [
         alt: "Hotel"
     },
     {
-        src: "/images/hero/trecime.jpg",
+        src: "/images/hero/trecime-2.jpg",
         alt: "Tre Cime"
     }
 ];
