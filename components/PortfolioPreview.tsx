@@ -1,10 +1,14 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, ChevronRight } from "lucide-react";
-import { portfolioData } from "@/lib/data";
+import { MapPin, ChevronRight, Plus } from "lucide-react";
+import { portfolioData, Property } from "@/lib/data";
+import PortfolioModal from "@/components/PortfolioModal";
 
 const PortfolioPreview = () => {
+    const [selectedItem, setSelectedItem] = useState<Property | null>(null);
     const previewItems = portfolioData.slice(0, 3);
 
     return (
@@ -28,20 +32,27 @@ const PortfolioPreview = () => {
                                     fill
                                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
+                                <div className="absolute inset-0 bg-black/5 group-hover:bg-black/20 transition-colors duration-500"></div>
+                                <button
+                                    onClick={() => setSelectedItem(item)}
+                                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm text-blue-600 p-4 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-50 group-hover:scale-100 shadow-xl"
+                                >
+                                    <Plus size={32} strokeWidth={3} />
+                                </button>
                             </div>
-                            <div className="p-6">
+                            <div className="p-6 flex-grow flex flex-col">
                                 <h3 className="text-xl font-bold text-gray-800 mb-2">{item.title}</h3>
                                 <div className="flex items-center gap-1.5 text-gray-500 text-sm font-medium mb-6">
                                     <MapPin size={16} className="text-blue-500" />
                                     {item.location}
                                 </div>
-                                <Link
-                                    href="/portfolio"
-                                    className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all hover:bg-blue-700 hover:gap-3"
+                                <button
+                                    onClick={() => setSelectedItem(item)}
+                                    className="mt-auto inline-flex items-center justify-between w-full bg-blue-50 text-blue-600 px-6 py-4 rounded-2xl font-bold transition-all hover:bg-blue-600 hover:text-white group/btn"
                                 >
-                                    Ver portfólio
-                                    <ChevronRight size={16} />
-                                </Link>
+                                    Ver detalhes
+                                    <ChevronRight size={20} className="transform group-hover/btn:translate-x-1 transition-transform" />
+                                </button>
                             </div>
                         </div>
                     ))}
@@ -57,6 +68,14 @@ const PortfolioPreview = () => {
                     </Link>
                 </div>
             </div>
+
+            {/* Modal Integration */}
+            {selectedItem && (
+                <PortfolioModal
+                    item={selectedItem}
+                    onClose={() => setSelectedItem(null)}
+                />
+            )}
         </section>
     );
 };

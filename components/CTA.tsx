@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { MessageSquare } from "lucide-react";
+import { MessageSquare, Instagram } from "lucide-react";
 
 const CTA = () => {
     return (
@@ -14,14 +14,25 @@ const CTA = () => {
                     Entre em contato agora mesmo e agende sua sessão de fotos e vídeos aéreos. Resposta imediata.
                 </p>
 
-                <Link
-                    href="https://wa.me/5519992805493"
-                    target="_blank"
-                    className="inline-flex items-center gap-4 bg-green-600 hover:bg-green-700 text-white px-12 py-6 rounded-2xl text-xl font-black shadow-2xl shadow-green-200 transition-all hover:scale-105 active:scale-95 group"
-                >
-                    <MessageSquare size={28} className="fill-white" />
-                    Falar no WhatsApp
-                </Link>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+                    <Link
+                        href="https://wa.me/5519992805493"
+                        target="_blank"
+                        className="inline-flex flex-1 sm:flex-none justify-center items-center gap-4 bg-green-600 hover:bg-green-700 text-white px-10 py-6 rounded-2xl text-xl font-black shadow-2xl shadow-green-200 transition-all hover:scale-105 active:scale-95 group"
+                    >
+                        <MessageSquare size={28} className="fill-white" />
+                        Falar no WhatsApp
+                    </Link>
+
+                    <Link
+                        href="https://www.instagram.com/pedro_h_henrique/"
+                        target="_blank"
+                        className="inline-flex flex-1 sm:flex-none justify-center items-center gap-4 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 hover:from-purple-600 hover:via-pink-600 hover:to-orange-600 text-white px-10 py-6 rounded-2xl text-xl font-black shadow-2xl shadow-pink-200 transition-all hover:scale-105 active:scale-95 group"
+                    >
+                        <Instagram size={28} />
+                        Seguir no Instagram
+                    </Link>
+                </div>
 
                 <div className="mt-12 flex items-center justify-center gap-8 text-gray-400 font-bold text-xs tracking-widest uppercase">
                     <span>ATENDIMENTO RÁPIDO</span>

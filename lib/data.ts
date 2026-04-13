@@ -6,56 +6,49 @@ export interface Property {
     image: string;
     videoUrl?: string;
     description: string;
+    gallery?: string[];
 }
 
 export const portfolioData: Property[] = [
     {
-        id: "1",
-        title: "Casa Alto Padrão",
-        location: "São Paulo - SP",
-        city: "São Paulo",
-        image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=1471&auto=format&fit=crop",
-        description: "Cobertura completa com fotos em 4k e vídeo cinematográfico de 60 segundos destacando a área de lazer e arquitetura moderna.",
-    },
-    {
-        id: "2",
-        title: "Condomínio Residencial",
-        location: "Campinas - SP",
-        city: "Campinas",
-        image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1374&auto=format&fit=crop",
-        description: "Imagens aéreas para acompanhamento de obra e marketing de lançamento de condomínio de luxo com foco nas áreas comuns.",
-    },
-    {
-        id: "3",
-        title: "Terreno à Venda",
-        location: "Sorocaba - SP",
-        city: "Sorocaba",
-        image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1632&auto=format&fit=crop",
-        description: "Mapeamento aéreo completo de terreno para loteamento, destacando a topografia e localização privilegiada.",
-    },
-    {
-        id: "4",
-        title: "Mansão Moderna",
-        location: "Barueri - SP",
-        city: "Alphaville",
-        image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1470&auto=format&fit=crop",
-        description: "Vídeo Reels dinâmico e fotos HDR para anúncio de venda rápida em portais de venda.",
-    },
-    {
         id: "5",
         title: "Edifício Corporativo",
-        location: "Santo André - SP",
-        city: "Santo André",
-        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1470&auto=format&fit=crop",
+        location: "Galleria Office Park",
+        city: "Campinas",
+        image: "/images/galleria.jpg", // Substitua por sua imagem do Galleria
+        videoUrl: "https://www.youtube.com/watch?v=sg9oeJ3a7-Y",
         description: "Fachada em ângulo superior e entorno urbano para apresentação institucional de empresa.",
     },
     {
-        id: "6",
-        title: "Residência de Campo",
-        location: "Atibaia - SP",
-        city: "Atibaia",
-        image: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?q=80&w=1365&auto=format&fit=crop",
-        description: "Destaque para a integração com a natureza e vista panorâmica da serra.",
+        id: "1",
+        title: "Monitoramento de Obras e Construções",
+        location: "São Paulo - SP",
+        city: "São Paulo",
+        image: "https://res.cloudinary.com/deazur8hn/image/upload/v1776105683/DJI_20260310210017_0129_D-2_lhqamp.jpg",
+        description: "Acompanhamento aéreo detalhado, fornecendo imagens de alta resolução para relatórios gerenciais e acompanhamento de evolução do projeto.",
+        gallery: [
+            "https://res.cloudinary.com/deazur8hn/image/upload/v1776105683/DJI_20260310210017_0129_D-2_lhqamp.jpg",
+            "https://res.cloudinary.com/deazur8hn/image/upload/v1776105191/dji_fly_20250901_173530_295_1756758953390_photo_optimized_ytf5c6.jpg",
+            "https://res.cloudinary.com/deazur8hn/image/upload/v1776105191/dji_fly_20250901_173810_305_1756759099860_photo_optimized_gyiiou.jpg"
+        ]
+    },
+    {
+        id: "2",
+        title: "Cinematográficos",
+        location: "Florença - Itália",
+        city: "Florença",
+        image: "https://img.youtube.com/vi/4FHkZE29hHk/maxresdefault.jpg",
+        videoUrl: "https://www.youtube.com/watch?v=4FHkZE29hHk",
+        description: "Imagens aéreas capturadas com drone DJI Air 3S destacando a beleza e arquitetura da Catedral Duomo.",
+    },
+    {
+        id: "7",
+        title: "Torre do Castelo",
+        location: "Campinas - SP",
+        city: "Campinas",
+        image: "https://img.youtube.com/vi/BjOj6uQJkJQ/maxresdefault.jpg",
+        videoUrl: "https://www.youtube.com/watch?v=BjOj6uQJkJQ",
+        description: "Imagens aéreas da histórica Torre do Castelo em Campinas, capturadas com drone destacando sua arquitetura marcante e a visão 360º da região.",
     }
 ];
 

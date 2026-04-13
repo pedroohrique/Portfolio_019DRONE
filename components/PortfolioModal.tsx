@@ -1,9 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { MapPin, X, MessageSquare } from "lucide-react";
+import { MapPin, X, MessageSquare, ChevronLeft, ChevronRight } from "lucide-react";
 import { Property } from "@/lib/data";
 
 interface ModalProps {
@@ -12,6 +12,19 @@ interface ModalProps {
 }
 
 const PortfolioModal = ({ item, onClose }: ModalProps) => {
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const gallery = item.gallery && item.gallery.length > 0 ? item.gallery : [item.image];
+
+    const prevImage = (e: React.MouseEvent) => {
+        e.stopPropagation();
+        setCurrentImageIndex((prev) => (prev === 0 ? gallery.length - 1 : prev - 1));
+    };
+
+    const nextImage = (e: React.MouseEvent) => {
+        e.stopPropagation();
+        setCurrentImageIndex((prev) => (prev === gallery.length - 1 ? 0 : prev + 1));
+    };
+
     return (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8">
             {/* Backdrop */}
@@ -31,14 +44,54 @@ const PortfolioModal = ({ item, onClose }: ModalProps) => {
                 </button>
 
                 {/* Media Side */}
-                <div className="relative w-full md:w-3/5 h-[300px] md:h-auto overflow-hidden">
-                    <Image
-                        src={item.image}
-                        alt={item.title}
-                        fill
-                        className="object-cover"
-                    />
-                    <div className="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-black/60 to-transparent md:hidden">
+                <div className="relative w-full md:w-3/5 h-[300px] md:min-h-[500px] md:h-auto overflow-hidden bg-black flex items-center justify-center">
+                    {item.videoUrl ? (
+                        <iframe
+                            className="w-full h-full min-h-[300px] md:min-h-full"
+                            src={item.videoUrl.replace("watch?v=", "embed/")}
+                            title={item.title}
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                        ></iframe>
+                    ) : (
+                        <>
+                            <Image
+                                src={gallery[currentImageIndex]}
+                                alt={item.title}
+                                fill
+                                className="object-contain"
+                            />
+                            {gallery.length > 1 && (
+                                <>
+                                    <button
+                                        onClick={prevImage}
+                                        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/50 hover:bg-black/80 text-white p-2 rounded-full backdrop-blur-md transition-all"
+                                    >
+                                        <ChevronLeft size={24} />
+                                    </button>
+                                    <button
+                                        onClick={nextImage}
+                                        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/50 hover:bg-black/80 text-white p-2 rounded-full backdrop-blur-md transition-all"
+                                    >
+                                        <ChevronRight size={24} />
+                                    </button>
+                                    <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20" onClick={(e) => e.stopPropagation()}>
+                                        {gallery.map((_, idx) => (
+                                            <button
+                                                key={idx}
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    setCurrentImageIndex(idx);
+                                                }}
+                                                className={`w-2.5 h-2.5 rounded-full transition-all ${idx === currentImageIndex ? "bg-white w-8" : "bg-white/50 hover:bg-white/80"}`}
+                                            />
+                                        ))}
+                                    </div>
+                                </>
+                            )}
+                        </>
+                    )}
+                    <div className="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-black/60 to-transparent md:hidden pointer-events-none z-10">
                         <h2 className="text-2xl font-bold text-white mb-2">{item.title}</h2>
                         <p className="text-white/80 flex items-center gap-1.5 font-medium">
                             <MapPin size={16} />
@@ -70,7 +123,7 @@ const PortfolioModal = ({ item, onClose }: ModalProps) => {
                             </div>
                             <div className="bg-gray-50 p-4 rounded-2xl border border-gray-100">
                                 <span className="block text-[10px] font-bold text-gray-400 uppercase mb-1">Equipamento</span>
-                                <span className="font-bold text-gray-700 uppercase">DJI Mavic 3</span>
+                                <span className="font-bold text-gray-700 uppercase">DJI AIR 3S</span>
                             </div>
                         </div>
                     </div>

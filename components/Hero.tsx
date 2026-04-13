@@ -7,20 +7,20 @@ import { MessageSquare, Check, Clock } from "lucide-react";
 
 const heroImages = [
     {
-        src: "/images/hero/hero-1.jpg",
-        alt: "Drone view 1 - Profissional"
+        src: "/images/hero/caravela.jpg",
+        alt: "Caravela"
     },
     {
-        src: "/images/hero/hero-2.jpg",
-        alt: "Drone view 2 - Panorama"
+        src: "/images/hero/castelo.jpg",
+        alt: "Castelo"
     },
     {
-        src: "/images/hero/hero-3.jpg",
-        alt: "Drone view 3 - Detalhes"
+        src: "/images/hero/hotel.jpg",
+        alt: "Hotel"
     },
     {
-        src: "/images/hero/hero-4.jpg",
-        alt: "Drone view 4 - Cinematic"
+        src: "/images/hero/trecime.jpg",
+        alt: "Tre Cime"
     }
 ];
 
