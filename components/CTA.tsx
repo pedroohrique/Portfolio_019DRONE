@@ -34,12 +34,12 @@ const CTA = () => {
                     </Link>
                 </div>
 
-                <div className="mt-12 flex items-center justify-center gap-8 text-gray-500 font-bold text-xs tracking-widest uppercase">
-                    <span>ATENDIMENTO RÁPIDO</span>
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span>QUALIDADE 4K</span>
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span>EQUIPAMENTO PRO</span>
+                <div className="mt-12 flex flex-wrap items-center justify-center gap-y-4 gap-x-6 sm:gap-8 text-gray-500 font-bold text-[10px] sm:text-xs tracking-widest uppercase px-4">
+                    <span className="whitespace-nowrap">ATENDIMENTO RÁPIDO</span>
+                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-600 rounded-full"></div>
+                    <span className="whitespace-nowrap">QUALIDADE 4K</span>
+                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-600 rounded-full"></div>
+                    <span className="whitespace-nowrap">EQUIPAMENTO PRO</span>
                 </div>
             </div>
         </section>
