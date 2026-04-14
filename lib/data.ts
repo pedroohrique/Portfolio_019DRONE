@@ -84,14 +84,14 @@ export const packages = [
         id: "basico",
         name: "BÁSICO",
         price: "350",
-        features: ["10 Fotos Aéreas", "Entrega 48h"],
+        features: ["20 a 30 Fotos Aéreas", "Entrega 48h"],
         highlight: false,
     },
     {
         id: "completo",
         name: "COMPLETO",
         price: "600",
-        features: ["10 Fotos + Vídeo 40s", "Edição Profissional"],
+        features: ["20 a 30 Fotos + Vídeo 40s", "Edição Profissional"],
         highlight: true,
     },
     {
