@@ -10,10 +10,10 @@ const iconMap = {
 
 const Services = () => {
     return (
-        <section className="py-24 bg-gray-50" id="servicos">
+        <section className="py-24 bg-[#111111]" id="servicos">
             <div className="max-w-7xl mx-auto px-4 md:px-8">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-800 tracking-tight">NOSSOS SERVIÇOS</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">NOSSOS SERVIÇOS</h2>
                     <div className="h-1.5 w-20 bg-blue-600 mx-auto mt-4 rounded-full"></div>
                 </div>
 
@@ -23,13 +23,13 @@ const Services = () => {
                         return (
                             <div
                                 key={service.id}
-                                className="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 group"
+                                className="bg-[#1a1a1a] p-8 md:p-10 rounded-3xl shadow-sm border border-white/5 hover:border-white/10 hover:shadow-xl transition-all duration-300 group"
                             >
-                                <div className="bg-blue-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                                    <Icon size={32} className="text-blue-600 group-hover:text-white transition-colors" />
+                                <div className="bg-blue-900/20 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                                    <Icon size={32} className="text-blue-500 group-hover:text-white transition-colors" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-gray-800 mb-4">{service.title}</h3>
-                                <p className="text-gray-500 leading-relaxed font-medium">
+                                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                                <p className="text-gray-400 leading-relaxed font-medium">
                                     {service.description.replace('imóveis', 'projetos e propriedades')}
                                 </p>
                             </div>

@@ -12,10 +12,10 @@ const PortfolioPreview = () => {
     const previewItems = portfolioData.slice(0, 3);
 
     return (
-        <section className="py-24 bg-white" id="portfolio-preview">
+        <section className="py-24 bg-[#0a0a0a]" id="portfolio-preview">
             <div className="max-w-7xl mx-auto px-4 md:px-8">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-800 tracking-tight">PORTFÓLIO</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">PORTFÓLIO</h2>
                     <div className="h-1.5 w-20 bg-blue-600 mx-auto mt-4 rounded-full"></div>
                 </div>
 
@@ -23,7 +23,7 @@ const PortfolioPreview = () => {
                     {previewItems.map((item) => (
                         <div
                             key={item.id}
-                            className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100"
+                            className="group bg-[#111111] rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white/5 hover:border-white/10"
                         >
                             <div className="relative h-64 w-full overflow-hidden">
                                 <Image
@@ -35,20 +35,20 @@ const PortfolioPreview = () => {
                                 <div className="absolute inset-0 bg-black/5 group-hover:bg-black/20 transition-colors duration-500"></div>
                                 <button
                                     onClick={() => setSelectedItem(item)}
-                                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm text-blue-600 p-4 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-50 group-hover:scale-100 shadow-xl"
+                                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#0a0a0a]/90 backdrop-blur-sm text-blue-500 p-4 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-50 group-hover:scale-100 shadow-xl"
                                 >
                                     <Plus size={32} strokeWidth={3} />
                                 </button>
                             </div>
                             <div className="p-6 flex-grow flex flex-col">
-                                <h3 className="text-xl font-bold text-gray-800 mb-2">{item.title}</h3>
-                                <div className="flex items-center gap-1.5 text-gray-500 text-sm font-medium mb-6">
+                                <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                                <div className="flex items-center gap-1.5 text-gray-400 text-sm font-medium mb-6">
                                     <MapPin size={16} className="text-blue-500" />
                                     {item.location}
                                 </div>
                                 <button
                                     onClick={() => setSelectedItem(item)}
-                                    className="mt-auto inline-flex items-center justify-between w-full bg-blue-50 text-blue-600 px-6 py-4 rounded-2xl font-bold transition-all hover:bg-blue-600 hover:text-white group/btn"
+                                    className="mt-auto inline-flex items-center justify-between w-full bg-blue-900/20 text-blue-500 px-6 py-4 rounded-2xl font-bold transition-all hover:bg-blue-600 hover:text-white group/btn"
                                 >
                                     Ver detalhes
                                     <ChevronRight size={20} className="transform group-hover/btn:translate-x-1 transition-transform" />
@@ -61,7 +61,7 @@ const PortfolioPreview = () => {
                 <div className="text-center">
                     <Link
                         href="/portfolio"
-                        className="inline-flex items-center gap-2 border-2 border-gray-200 text-gray-600 px-10 py-4 rounded-xl text-lg font-bold hover:border-blue-600 hover:text-blue-600 transition-all"
+                        className="inline-flex items-center gap-2 border-2 border-white/10 text-gray-300 px-10 py-4 rounded-xl text-lg font-bold hover:border-blue-500 hover:text-blue-500 transition-all"
                     >
                         Ver portfólio completo
                         <ChevronRight size={20} />

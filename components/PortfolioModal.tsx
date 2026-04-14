@@ -34,7 +34,7 @@ const PortfolioModal = ({ item, onClose }: ModalProps) => {
             ></div>
 
             {/* Modal Content */}
-            <div className="relative bg-white w-full max-w-5xl max-h-[90vh] rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row modal-scale z-10 border border-white/20">
+            <div className="relative bg-[#111111] w-full max-w-5xl max-h-[90vh] rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row modal-scale z-10 border border-white/5">
                 {/* Close Button */}
                 <button
                     onClick={onClose}
@@ -103,27 +103,27 @@ const PortfolioModal = ({ item, onClose }: ModalProps) => {
                 {/* Info Side */}
                 <div className="w-full md:w-2/5 p-8 md:p-12 flex flex-col overflow-y-auto">
                     <div className="hidden md:block mb-10">
-                        <h2 className="text-3xl font-black text-gray-800 mb-4">{item.title}</h2>
-                        <p className="text-gray-500 flex items-center gap-2 font-bold text-sm tracking-widest uppercase">
-                            <MapPin size={18} className="text-blue-600" />
+                        <h2 className="text-3xl font-black text-white mb-4">{item.title}</h2>
+                        <p className="text-gray-400 flex items-center gap-2 font-bold text-sm tracking-widest uppercase">
+                            <MapPin size={18} className="text-blue-500" />
                             {item.location}
                         </p>
                     </div>
 
                     <div className="space-y-6 flex-grow">
-                        <h4 className="text-xs font-black tracking-widest text-blue-600 uppercase">Descrição do Projeto</h4>
-                        <p className="text-gray-600 leading-relaxed text-lg font-medium">
+                        <h4 className="text-xs font-black tracking-widest text-blue-500 uppercase">Descrição do Projeto</h4>
+                        <p className="text-gray-300 leading-relaxed text-lg font-medium">
                             {item.description}
                         </p>
 
                         <div className="grid grid-cols-2 gap-4 pt-4">
-                            <div className="bg-gray-50 p-4 rounded-2xl border border-gray-100">
-                                <span className="block text-[10px] font-bold text-gray-400 uppercase mb-1">Resolução</span>
-                                <span className="font-bold text-gray-700 uppercase">4K / 60FPS</span>
+                            <div className="bg-white/5 p-4 rounded-2xl border border-white/5">
+                                <span className="block text-[10px] font-bold text-gray-500 uppercase mb-1">Resolução</span>
+                                <span className="font-bold text-gray-200 uppercase">4K / 60FPS</span>
                             </div>
-                            <div className="bg-gray-50 p-4 rounded-2xl border border-gray-100">
-                                <span className="block text-[10px] font-bold text-gray-400 uppercase mb-1">Equipamento</span>
-                                <span className="font-bold text-gray-700 uppercase">DJI AIR 3S</span>
+                            <div className="bg-white/5 p-4 rounded-2xl border border-white/5">
+                                <span className="block text-[10px] font-bold text-gray-500 uppercase mb-1">Equipamento</span>
+                                <span className="font-bold text-gray-200 uppercase">DJI AIR 3S</span>
                             </div>
                         </div>
                     </div>
@@ -132,7 +132,7 @@ const PortfolioModal = ({ item, onClose }: ModalProps) => {
                         <Link
                             href="https://wa.me/5519992805493?text=Ol%C3%A1%21+Vim+atrav%C3%A9s+do+site+e+gostaria+de+mais+informa%C3%A7%C3%B5es."
                             target="_blank"
-                            className="w-full bg-green-600 hover:bg-green-700 text-white py-5 rounded-2xl font-black text-lg shadow-xl shadow-green-100 transition-all flex items-center justify-center gap-3 group"
+                            className="w-full bg-green-600 hover:bg-green-700 text-white py-5 rounded-2xl font-black text-lg shadow-xl shadow-green-900/20 transition-all flex items-center justify-center gap-3 group"
                         >
                             <MessageSquare size={22} className="group-hover:scale-110 transition-transform" />
                             Solicitar Orçamento

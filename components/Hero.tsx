@@ -40,11 +40,11 @@ const Hero = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Left Content */}
                     <div className="flex flex-col gap-8 max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-[1.1] tracking-tight">
-                            Imagens aéreas profissionais para <span className="text-blue-600">valorizar</span> o seu empreendimento
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight">
+                            Imagens aéreas profissionais para <span className="text-blue-500">valorizar</span> o seu empreendimento
                         </h1>
 
-                        <p className="text-xl text-gray-500 font-medium">
+                        <p className="text-xl text-gray-400 font-medium">
                             Fotos e vídeos com drone para anúncios e projetos de alto impacto.
                         </p>
 
@@ -52,20 +52,20 @@ const Hero = () => {
                             <Link
                                 href="https://wa.me/5519992805493?text=Ol%C3%A1%21+Vim+atrav%C3%A9s+do+site+e+gostaria+de+mais+informa%C3%A7%C3%B5es."
                                 target="_blank"
-                                className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-8 py-5 rounded-2xl text-lg font-bold shadow-xl shadow-blue-200 transition-all flex items-center justify-center gap-3 group"
+                                className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-8 py-5 rounded-2xl text-lg font-bold shadow-xl shadow-blue-900/30 transition-all flex items-center justify-center gap-3 group"
                             >
                                 Solicitar Orçamento
                                 <MessageSquare size={22} className="group-hover:scale-110 transition-transform" />
                             </Link>
                         </div>
 
-                        <div className="flex flex-wrap items-center gap-6 text-sm font-semibold text-gray-500 justify-center lg:justify-start mt-4">
-                            <div className="flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1.5 rounded-full">
-                                <Check size={16} className="text-blue-600" />
+                        <div className="flex flex-wrap items-center gap-6 text-sm font-semibold text-gray-400 justify-center lg:justify-start mt-4">
+                            <div className="flex items-center gap-2 bg-blue-900/30 text-blue-400 px-4 py-2 rounded-full border border-blue-800/50">
+                                <Check size={16} className="text-blue-500" />
                                 Autorizado pela ANAC
                             </div>
-                            <div className="flex items-center gap-2 bg-green-50 text-green-700 px-3 py-1.5 rounded-full">
-                                <Clock size={16} className="text-green-600" />
+                            <div className="flex items-center gap-2 bg-green-900/30 text-green-400 px-4 py-2 rounded-full border border-green-800/50">
+                                <Clock size={16} className="text-green-500" />
                                 Entrega 48h
                             </div>
                         </div>

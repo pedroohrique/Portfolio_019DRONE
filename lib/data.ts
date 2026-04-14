@@ -94,5 +94,12 @@ export const packages = [
         price: "900",
         features: ["Foto + Vídeo + Reels", "Entrega 72h"],
         highlight: false,
+    },
+    {
+        id: "personalizado",
+        name: "PERSONALIZADO",
+        price: "Sua Escolha",
+        features: ["Serviços sob medida", "Cobertura de Eventos", "Personalização total"],
+        highlight: false,
     }
 ];

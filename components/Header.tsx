@@ -28,14 +28,14 @@ const Header = () => {
     const isActive = (path: string) => pathname === path;
 
     return (
-        <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-white shadow-md py-3" : "bg-white/90 backdrop-blur-md py-5 shadow-sm"}`}>
+        <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-[#0a0a0a]/95 shadow-md py-3" : "bg-transparent py-5"}`}>
             <div className="max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center">
                 {/* Logo */}
                 <Link href="/" className="flex flex-col">
-                    <span className="text-2xl font-bold tracking-tighter text-gray-800 leading-none">
-                        019 <span className="text-blue-600">DRONE</span>
+                    <span className="text-2xl font-bold tracking-tighter text-white leading-none">
+                        019 <span className="text-blue-500">DRONE</span>
                     </span>
-                    <span className="text-[10px] tracking-widest text-gray-400 font-medium uppercase mt-0.5">
+                    <span className="text-[10px] tracking-widest text-gray-500 font-medium uppercase mt-0.5">
                         IMAGENS AÉREAS
                     </span>
                 </Link>
@@ -46,7 +46,7 @@ const Header = () => {
                         <Link
                             key={link.name}
                             href={link.href}
-                            className={`text-sm font-semibold transition-colors hover:text-blue-600 ${isActive(link.href) ? "text-blue-600" : "text-gray-600"}`}
+                            className={`text-sm font-semibold transition-colors hover:text-blue-500 ${isActive(link.href) ? "text-blue-500" : "text-gray-300"}`}
                         >
                             {link.name}
                         </Link>
@@ -62,7 +62,7 @@ const Header = () => {
 
                 {/* Mobile Toggle */}
                 <button
-                    className="md:hidden text-gray-600 focus:outline-none"
+                    className="md:hidden text-white focus:outline-none"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >
                     {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -71,13 +71,13 @@ const Header = () => {
 
             {/* Mobile Menu */}
             {isMenuOpen && (
-                <div className="md:hidden absolute top-full left-0 right-0 bg-white border-t shadow-xl py-6 px-4 flex flex-col gap-4 animate-in fade-in slide-in-from-top-4 duration-300">
+                <div className="md:hidden absolute top-full left-0 right-0 bg-[#111111] border-t border-white/5 shadow-xl py-6 px-4 flex flex-col gap-4 animate-in fade-in slide-in-from-top-4 duration-300">
                     {navLinks.map((link) => (
                         <Link
                             key={link.name}
                             href={link.href}
                             onClick={() => setIsMenuOpen(false)}
-                            className={`text-lg font-semibold py-2 px-4 rounded-lg ${isActive(link.href) ? "bg-blue-50 text-blue-600" : "text-gray-700"}`}
+                            className={`text-lg font-semibold py-2 px-4 rounded-lg ${isActive(link.href) ? "bg-blue-900/20 text-blue-500" : "text-gray-300"}`}
                         >
                             {link.name}
                         </Link>
