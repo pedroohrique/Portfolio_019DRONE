@@ -52,7 +52,7 @@ const Header = () => {
                         </Link>
                     ))}
 
-                    <Link href="https://wa.me/5519992805493" target="_blank" className="bg-green-600 hover:bg-green-700 text-white px-6 py-2.5 rounded-lg text-sm font-bold shadow-md transition-all flex items-center gap-2">
+                    <Link href="https://wa.me/5519994411529" target="_blank" className="bg-green-600 hover:bg-green-700 text-white px-6 py-2.5 rounded-lg text-sm font-bold shadow-md transition-all flex items-center gap-2">
                         ORÇAMENTO
                         <div className="bg-white/20 rounded px-1.5 py-0.5">
                             <CheckCircle size={14} className="text-white" />
@@ -83,7 +83,7 @@ const Header = () => {
                         </Link>
                     ))}
                     <Link
-                        href="https://wa.me/5519992805493"
+                        href="https://wa.me/5519994411529"
                         target="_blank"
                         onClick={() => setIsMenuOpen(false)}
                         className="mt-4 bg-green-600 text-white text-center py-4 rounded-xl text-lg font-bold shadow-lg"

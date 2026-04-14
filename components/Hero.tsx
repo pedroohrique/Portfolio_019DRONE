@@ -50,7 +50,7 @@ const Hero = () => {
 
                         <div className="flex flex-col sm:flex-row items-center gap-6 mt-4 justify-center lg:justify-start">
                             <Link
-                                href="https://wa.me/5519992805493?text=Ol%C3%A1%21+Vim+atrav%C3%A9s+do+site+e+gostaria+de+mais+informa%C3%A7%C3%B5es."
+                                href="https://wa.me/5519994411529?text=Ol%C3%A1%21+Vim+atrav%C3%A9s+do+site+e+gostaria+de+mais+informa%C3%A7%C3%B5es."
                                 target="_blank"
                                 className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-8 py-5 rounded-2xl text-lg font-bold shadow-xl shadow-blue-900/30 transition-all flex items-center justify-center gap-3 group"
                             >

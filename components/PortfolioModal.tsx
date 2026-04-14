@@ -138,7 +138,7 @@ const PortfolioModal = ({ item, onClose }: ModalProps) => {
 
                     <div className="mt-8 md:mt-12">
                         <Link
-                            href="https://wa.me/5519992805493?text=Ol%C3%A1%21+Vim+atrav%C3%A9s+do+site+e+gostaria+de+mais+informa%C3%A7%C3%B5es."
+                            href="https://wa.me/5519994411529?text=Ol%C3%A1%21+Vim+atrav%C3%A9s+do+site+e+gostaria+de+mais+informa%C3%A7%C3%B5es."
                             target="_blank"
                             className="w-full bg-green-600 hover:bg-green-700 text-white py-4 md:py-5 rounded-2xl font-black text-base md:text-lg shadow-xl shadow-green-900/20 transition-all flex items-center justify-center gap-3 group"
                         >

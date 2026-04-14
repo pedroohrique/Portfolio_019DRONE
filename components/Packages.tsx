@@ -53,7 +53,7 @@ const Packages = () => {
                             </ul>
 
                             <a 
-                                href={`https://wa.me/5519992805493?text=${encodeURIComponent(`Olá! Vim através do site e gostaria de saber mais sobre o pacote ${pkg.name}.`)}`}
+                                href={`https://wa.me/5519994411529?text=${encodeURIComponent(`Olá! Vim através do site e gostaria de saber mais sobre o pacote ${pkg.name}.`)}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="mt-auto w-full py-4 rounded-xl font-bold transition-all text-center flex justify-center items-center gap-2 text-sm bg-blue-600 text-white hover:bg-blue-700 shadow-lg shadow-blue-900/30"
