@@ -101,40 +101,48 @@ const PortfolioModal = ({ item, onClose }: ModalProps) => {
                 </div>
 
                 {/* Info Side */}
-                <div className="w-full md:w-2/5 p-8 md:p-12 flex flex-col overflow-y-auto">
+                <div className="w-full md:w-2/5 p-6 md:p-12 flex flex-col overflow-y-auto">
                     <div className="hidden md:block mb-10">
-                        <h2 className="text-3xl font-black text-white mb-4">{item.title}</h2>
-                        <p className="text-gray-400 flex items-center gap-2 font-bold text-sm tracking-widest uppercase">
+                        <h2 className="text-2xl md:text-3xl font-black text-white mb-4">{item.title}</h2>
+                        <p className="text-gray-400 flex items-center gap-2 font-bold text-xs md:text-sm tracking-widest uppercase">
                             <MapPin size={18} className="text-blue-500" />
                             {item.location}
                         </p>
                     </div>
 
                     <div className="space-y-6 flex-grow">
-                        <h4 className="text-xs font-black tracking-widest text-blue-500 uppercase">Descrição do Projeto</h4>
-                        <p className="text-gray-300 leading-relaxed text-lg font-medium">
+                        <div className="md:hidden">
+                             <h2 className="text-2xl font-black text-white mb-2">{item.title}</h2>
+                             <p className="text-gray-400 flex items-center gap-2 font-bold text-xs tracking-widest uppercase mb-6">
+                                <MapPin size={14} className="text-blue-500" />
+                                {item.location}
+                            </p>
+                        </div>
+
+                        <h4 className="text-[10px] md:text-xs font-black tracking-widest text-blue-500 uppercase">Descrição do Projeto</h4>
+                        <p className="text-gray-300 leading-relaxed text-base md:text-lg font-medium">
                             {item.description}
                         </p>
 
-                        <div className="grid grid-cols-2 gap-4 pt-4">
-                            <div className="bg-white/5 p-4 rounded-2xl border border-white/5">
-                                <span className="block text-[10px] font-bold text-gray-500 uppercase mb-1">Resolução</span>
-                                <span className="font-bold text-gray-200 uppercase">4K / 60FPS</span>
+                        <div className="grid grid-cols-2 gap-3 md:gap-4 pt-2 md:pt-4">
+                            <div className="bg-white/5 p-3 md:p-4 rounded-2xl border border-white/5">
+                                <span className="block text-[8px] md:text-[10px] font-bold text-gray-500 uppercase mb-1">Resolução</span>
+                                <span className="font-bold text-gray-200 uppercase text-xs md:text-base">4K / 60FPS</span>
                             </div>
-                            <div className="bg-white/5 p-4 rounded-2xl border border-white/5">
-                                <span className="block text-[10px] font-bold text-gray-500 uppercase mb-1">Equipamento</span>
-                                <span className="font-bold text-gray-200 uppercase">DJI AIR 3S</span>
+                            <div className="bg-white/5 p-3 md:p-4 rounded-2xl border border-white/5">
+                                <span className="block text-[8px] md:text-[10px] font-bold text-gray-500 uppercase mb-1">Equipamento</span>
+                                <span className="font-bold text-gray-200 uppercase text-xs md:text-base">DJI AIR 3S</span>
                             </div>
                         </div>
                     </div>
 
-                    <div className="mt-12">
+                    <div className="mt-8 md:mt-12">
                         <Link
                             href="https://wa.me/5519992805493?text=Ol%C3%A1%21+Vim+atrav%C3%A9s+do+site+e+gostaria+de+mais+informa%C3%A7%C3%B5es."
                             target="_blank"
-                            className="w-full bg-green-600 hover:bg-green-700 text-white py-5 rounded-2xl font-black text-lg shadow-xl shadow-green-900/20 transition-all flex items-center justify-center gap-3 group"
+                            className="w-full bg-green-600 hover:bg-green-700 text-white py-4 md:py-5 rounded-2xl font-black text-base md:text-lg shadow-xl shadow-green-900/20 transition-all flex items-center justify-center gap-3 group"
                         >
-                            <MessageSquare size={22} className="group-hover:scale-110 transition-transform" />
+                            <MessageSquare className="w-5 h-5 md:w-6 md:h-6 group-hover:scale-110 transition-transform" />
                             Solicitar Orçamento
                         </Link>
                     </div>

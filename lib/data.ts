@@ -70,6 +70,12 @@ export const services = [
         title: "Reels para Instagram",
         description: "Vídeos verticais envolventes para destacar propriedades nas redes sociais.",
         iconName: "Instagram",
+    },
+    {
+        id: 4,
+        title: "Mapeamento Aéreo",
+        description: "Mapeamento de terrenos, imóveis e estruturas com drones, gerando imagens precisas para análise e planejamento.",
+        iconName: "Satellite",
     }
 ];
 

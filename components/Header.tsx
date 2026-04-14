@@ -32,10 +32,10 @@ const Header = () => {
             <div className="max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center">
                 {/* Logo */}
                 <Link href="/" className="flex flex-col">
-                    <span className="text-2xl font-bold tracking-tighter text-white leading-none">
+                    <span className="text-xl md:text-2xl font-bold tracking-tighter text-white leading-none">
                         019 <span className="text-blue-500">DRONE</span>
                     </span>
-                    <span className="text-[10px] tracking-widest text-gray-500 font-medium uppercase mt-0.5">
+                    <span className="text-[8px] md:text-[10px] tracking-widest text-gray-500 font-medium uppercase mt-0.5">
                         IMAGENS AÉREAS
                     </span>
                 </Link>

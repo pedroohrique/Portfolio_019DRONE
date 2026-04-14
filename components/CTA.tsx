@@ -27,7 +27,7 @@ const CTA = () => {
                     <Link
                         href="https://www.instagram.com/pedro_h_henrique/"
                         target="_blank"
-                        className="inline-flex flex-1 sm:flex-none justify-center items-center gap-4 bg-white/10 hover:bg-white/20 text-white px-10 py-6 rounded-2xl text-xl font-black transition-all hover:scale-105 active:scale-95 group"
+                        className="inline-flex flex-1 sm:flex-none justify-center items-center gap-4 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 hover:from-purple-600 hover:via-pink-600 hover:to-orange-600 text-white px-10 py-6 rounded-2xl text-xl font-black shadow-2xl shadow-pink-900/20 transition-all hover:scale-105 active:scale-95 group"
                     >
                         <Instagram size={28} />
                         Seguir no Instagram

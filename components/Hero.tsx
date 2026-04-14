@@ -35,16 +35,16 @@ const Hero = () => {
     }, []);
 
     return (
-        <section className="py-20 md:py-32 overflow-hidden">
+        <section className="py-12 md:py-32 overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 md:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Left Content */}
-                    <div className="flex flex-col gap-8 max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight">
+                    <div className="flex flex-col gap-6 md:gap-8 max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
+                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.2] md:leading-[1.1] tracking-tight">
                             Imagens aéreas profissionais para <span className="text-blue-500">valorizar</span> o seu empreendimento
                         </h1>
 
-                        <p className="text-xl text-gray-400 font-medium">
+                        <p className="text-lg md:text-xl text-gray-400 font-medium">
                             Fotos e vídeos com drone para anúncios e projetos de alto impacto.
                         </p>
 

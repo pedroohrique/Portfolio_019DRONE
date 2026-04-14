@@ -15,8 +15,8 @@ const Packages = () => {
                     {packages.map((pkg) => (
                         <div
                             key={pkg.id}
-                            className={`relative flex flex-col p-8 rounded-3xl transition-all duration-300 h-full ${pkg.highlight
-                                ? "bg-blue-900/10 border-2 border-blue-600 shadow-[0_0_30px_-5px_rgba(37,99,235,0.3)] scale-105 z-10"
+                            className={`relative flex flex-col p-6 md:p-8 rounded-3xl transition-all duration-300 h-full ${pkg.highlight
+                                ? "bg-blue-900/10 border-2 border-blue-600 shadow-[0_0_30px_-5px_rgba(37,99,235,0.3)] md:scale-105 z-10"
                                 : "bg-[#111111] border border-white/5 shadow-md hover:shadow-xl hover:border-white/10"
                                 }`}
                         >
@@ -56,7 +56,7 @@ const Packages = () => {
                                 href={`https://wa.me/5519992805493?text=${encodeURIComponent(`Olá! Vim através do site e gostaria de saber mais sobre o pacote ${pkg.name}.`)}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className={`mt-auto w-full py-3.5 rounded-xl font-bold transition-all text-center flex justify-center items-center gap-2 text-sm ${pkg.highlight ? 'bg-blue-600 text-white hover:bg-blue-700 shadow-lg shadow-blue-900/30' : 'bg-white/10 text-white hover:bg-white/20'}`}
+                                className="mt-auto w-full py-4 rounded-xl font-bold transition-all text-center flex justify-center items-center gap-2 text-sm bg-blue-600 text-white hover:bg-blue-700 shadow-lg shadow-blue-900/30"
                             >
                                 Quero este
                             </a>

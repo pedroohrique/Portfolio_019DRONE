@@ -1,11 +1,12 @@
 import React from "react";
-import { Camera, Video, Instagram } from "lucide-react";
+import { Camera, Video, Instagram, Satellite } from "lucide-react";
 import { services } from "@/lib/data";
 
 const iconMap = {
     Camera: Camera,
     Video: Video,
     Instagram: Instagram,
+    Satellite: Satellite,
 };
 
 const Services = () => {
@@ -17,20 +18,20 @@ const Services = () => {
                     <div className="h-1.5 w-20 bg-blue-600 mx-auto mt-4 rounded-full"></div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {services.map((service) => {
                         const Icon = iconMap[service.iconName as keyof typeof iconMap];
                         return (
                             <div
                                 key={service.id}
-                                className="bg-[#1a1a1a] p-8 md:p-10 rounded-3xl shadow-sm border border-white/5 hover:border-white/10 hover:shadow-xl transition-all duration-300 group"
+                                className="bg-[#1a1a1a] p-6 md:p-10 rounded-3xl shadow-sm border border-white/5 hover:border-white/10 hover:shadow-xl transition-all duration-300 group"
                             >
-                                <div className="bg-blue-900/20 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                                    <Icon size={32} className="text-blue-500 group-hover:text-white transition-colors" />
+                                <div className="bg-blue-900/20 w-14 h-14 md:w-16 md:h-16 rounded-2xl flex items-center justify-center mb-6 md:mb-8 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                                    <Icon className="w-7 h-7 md:w-8 md:h-8 text-blue-500 group-hover:text-white transition-colors" />
                                 </div>
                                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                                 <p className="text-gray-400 leading-relaxed font-medium">
-                                    {service.description.replace('imóveis', 'projetos e propriedades')}
+                                    {service.description}
                                 </p>
                             </div>
                         );
