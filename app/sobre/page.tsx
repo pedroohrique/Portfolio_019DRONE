@@ -55,12 +55,9 @@ const SobrePage = () => {
                                     utilizando tecnologia de ponta para entregar resultados precisos, seguros e visualmente impactantes.
                                 </p>
                                 
-                                <p className="text-gray-400 leading-relaxed font-semibold">
-                                    Utilizamos o <span className="text-white border-b-2 border-blue-500">DJI Air 3S</span>, um dos drones mais avançados do mercado para produções cinematográficas e técnicas.
-                                </p>
-                                
                                 <p className="text-gray-400 leading-relaxed">
-                                    Este equipamento conta com um sistema de câmera dupla de última geração: um sensor CMOS de 1 polegada com 50MP para imagens ultra-nítidas e uma teleobjetiva de 70mm, garantindo versatilidade e definição em cada projeto realizado.
+                                    Trabalhamos com drones DJI, referência mundial no segmento, garantindo estabilidade, 
+                                    definição e excelência em cada projeto realizado.
                                 </p>
                             </div>
                         </div>
@@ -69,23 +66,23 @@ const SobrePage = () => {
                             {[
                                 {
                                     icon: <Zap className="text-blue-500" />,
-                                    title: "Tecnologia LiDAR",
-                                    desc: "Primeiro drone DJI com LiDAR frontal para detecção de obstáculos em voos noturnos."
+                                    title: "Qualidade de Ponta",
+                                    desc: "Equipamentos de última geração para resultados profissionais."
                                 },
                                 {
                                     icon: <Shield className="text-blue-500" />,
-                                    title: "Câmera Dupla",
-                                    desc: "Sensores profissionais de 1 polegada e CMOS 1/1.3 para fotos de 50MP."
+                                    title: "Segurança Total",
+                                    desc: "Operações seguras e seguindo todas as normas vigentes."
                                 },
                                 {
                                     icon: <Camera className="text-blue-500" />,
-                                    title: "Vídeo 4K/120fps",
-                                    desc: "Capacidade de slow motion em ultra alta definição para cenas impactantes."
+                                    title: "Olhar Técnico",
+                                    desc: "Foco nos detalhes que fazem a diferença no seu projeto."
                                 },
                                 {
                                     icon: <Award className="text-blue-500" />,
-                                    title: "45 Min de Voo",
-                                    desc: "Maior tempo no ar para capturar todos os ângulos sem interrupções."
+                                    title: "Excelência",
+                                    desc: "Compromisso com a satisfação e o valor agregado."
                                 }
                             ].map((item, index) => (
                                 <div key={index} className="p-6 rounded-2xl bg-[#111111] border border-white/5 hover:border-blue-500/30 transition-all group">

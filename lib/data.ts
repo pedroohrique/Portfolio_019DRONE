@@ -48,7 +48,7 @@ export const portfolioData: Property[] = [
         city: "Campinas",
         image: "https://img.youtube.com/vi/BjOj6uQJkJQ/maxresdefault.jpg",
         videoUrl: "https://www.youtube.com/watch?v=BjOj6uQJkJQ",
-        description: "Imagens aéreas da histórica Torre do Castelo em Campinas, capturadas com drone DJI Air 3S destacando sua arquitetura marcante e a visão 360º da região.",
+        description: "Imagens aéreas da histórica Torre do Castelo em Campinas, capturadas com drone destacando sua arquitetura marcante e a visão 360º da região.",
     }
 ];
 
