@@ -52,6 +52,7 @@ const PortfolioModal = ({ item, onClose }: ModalProps) => {
                             title={item.title}
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
+                            loading="lazy"
                         ></iframe>
                     ) : (
                         <>
@@ -59,6 +60,7 @@ const PortfolioModal = ({ item, onClose }: ModalProps) => {
                                 src={gallery[currentImageIndex]}
                                 alt={item.title}
                                 fill
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 60vw"
                                 className="object-contain"
                             />
                             {gallery.length > 1 && (
