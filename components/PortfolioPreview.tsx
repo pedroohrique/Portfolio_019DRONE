@@ -36,6 +36,7 @@ const PortfolioPreview = () => {
                                 <div className="absolute inset-0 bg-black/5 group-hover:bg-black/20 transition-colors duration-500"></div>
                                 <button
                                     onClick={() => setSelectedItem(item)}
+                                    aria-label={`Ver mais sobre ${item.title}`}
                                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#0a0a0a]/90 backdrop-blur-sm text-blue-500 p-4 rounded-full opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 transform scale-100 md:scale-50 md:group-hover:scale-100 shadow-xl"
                                 >
                                     <Plus className="w-6 h-6 md:w-8 md:h-8" strokeWidth={3} />

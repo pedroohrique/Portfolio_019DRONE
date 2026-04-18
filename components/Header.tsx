@@ -53,7 +53,12 @@ const Header = () => {
                         </Link>
                     ))}
 
-                    <Link href="https://wa.me/5519994411529" target="_blank" className="bg-green-600 hover:bg-green-700 text-white px-6 py-2.5 rounded-lg text-sm font-bold shadow-md transition-all flex items-center gap-2">
+                    <Link 
+                        href="https://wa.me/5519994411529" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="bg-green-600 hover:bg-green-700 text-white px-6 py-2.5 rounded-lg text-sm font-bold shadow-md transition-all flex items-center gap-2"
+                    >
                         ORÇAMENTO
                         <div className="bg-white/20 rounded px-1.5 py-0.5">
                             <CheckCircle size={14} className="text-white" />
@@ -65,6 +70,7 @@ const Header = () => {
                 <button
                     className="md:hidden text-white focus:outline-none"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
                 >
                     {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
                 </button>
@@ -86,6 +92,7 @@ const Header = () => {
                     <Link
                         href="https://wa.me/5519994411529"
                         target="_blank"
+                        rel="noopener noreferrer"
                         onClick={() => setIsMenuOpen(false)}
                         className="mt-6 bg-green-600 hover:bg-green-700 text-white text-center py-5 rounded-2xl text-xl font-black shadow-xl shadow-green-900/20 active:scale-95 transition-all"
                     >

@@ -8,19 +8,19 @@ import { MessageSquare, Check, Clock } from "lucide-react";
 const heroImages = [
     {
         src: "https://res.cloudinary.com/deazur8hn/image/upload/v1776109850/DJI_20260316180836_0152_D_avfruv.jpg",
-        alt: "Caravela"
+        alt: "Drone de última geração realizando captação de imagens aéreas cinematográficas"
     },
     {
         src: "https://res.cloudinary.com/deazur8hn/image/upload/v1776109850/DJI_20260303220607_0166_D_aih5lc.jpg",
-        alt: "Castelo"
+        alt: "Vista aérea profissional de um empreendimento de alto padrão"
     },
     {
         src: "https://res.cloudinary.com/deazur8hn/image/upload/v1776109850/hotel-2_peyvcf.jpg",
-        alt: "Hotel"
+        alt: "Filmagem aérea de hotel para marketing institucional"
     },
     {
         src: "https://res.cloudinary.com/deazur8hn/image/upload/v1776109850/trecime-2-2_j7zcbd.jpg",
-        alt: "Tre Cime"
+        alt: "Fotografia aérea de alta resolução para acompanhamento de projetos"
     }
 ];
 
@@ -52,6 +52,7 @@ const Hero = () => {
                             <Link
                                 href="https://wa.me/5519994411529?text=Ol%C3%A1%21+Vim+atrav%C3%A9s+do+site+e+gostaria+de+mais+informa%C3%A7%C3%B5es."
                                 target="_blank"
+                                rel="noopener noreferrer"
                                 className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-8 py-5 rounded-2xl text-lg font-bold shadow-xl shadow-blue-900/30 transition-all flex items-center justify-center gap-3 group"
                             >
                                 Solicitar Orçamento
@@ -98,6 +99,7 @@ const Hero = () => {
                                     <button
                                         key={index}
                                         onClick={() => setCurrentImage(index)}
+                                        aria-label={`Ver imagem ${index + 1}`}
                                         className={`w-2 h-2 rounded-full transition-all ${index === currentImage ? "bg-white w-6" : "bg-white/50"
                                             }`}
                                     />

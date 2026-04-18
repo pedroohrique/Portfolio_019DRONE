@@ -18,6 +18,7 @@ const CTA = () => {
                     <Link
                         href="https://wa.me/5519994411529?text=Ol%C3%A1%21+Vim+atrav%C3%A9s+do+site+e+gostaria+de+mais+informa%C3%A7%C3%B5es."
                         target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex flex-1 sm:flex-none justify-center items-center gap-4 bg-green-600 hover:bg-green-700 text-white px-10 py-6 rounded-2xl text-xl font-black shadow-2xl shadow-green-900/20 transition-all hover:scale-105 active:scale-95 group"
                     >
                         <MessageSquare size={28} className="fill-white" />
@@ -27,6 +28,7 @@ const CTA = () => {
                     <Link
                         href="https://www.instagram.com/pedro_h_henrique/"
                         target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex flex-1 sm:flex-none justify-center items-center gap-4 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 hover:from-purple-600 hover:via-pink-600 hover:to-orange-600 text-white px-10 py-6 rounded-2xl text-xl font-black shadow-2xl shadow-pink-900/20 transition-all hover:scale-105 active:scale-95 group"
                     >
                         <Instagram size={28} />

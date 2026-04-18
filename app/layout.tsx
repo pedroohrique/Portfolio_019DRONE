@@ -7,6 +7,26 @@ import Header from "@/components/Header";
 export const metadata: Metadata = {
     title: "019 DRONE | Imagens Aéreas Profissionais",
     description: "Fotos e vídeos com drone para anúncios e projetos de alto padrão. Valorize seu empreendimento com imagens cinematográficas.",
+    keywords: ["drone", "imagens aéreas", "fotografia", "vídeo", "imobiliário", "019 drone"],
+    authors: [{ name: "019 DRONE" }],
+    openGraph: {
+        title: "019 DRONE | Imagens Aéreas Profissionais",
+        description: "Fotos e vídeos com drone para anúncios e projetos de alto padrão.",
+        url: "https://019drone.com.br",
+        siteName: "019 DRONE",
+        locale: "pt_BR",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "019 DRONE | Imagens Aéreas Profissionais",
+        description: "Fotos e vídeos com drone para anúncios e projetos de alto padrão.",
+    },
+    icons: {
+        icon: "/favicon.ico",
+        shortcut: "/favicon.ico",
+        apple: "/apple-touch-icon.png",
+    },
 };
 
 export default function RootLayout({
