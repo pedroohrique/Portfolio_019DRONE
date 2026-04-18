@@ -42,7 +42,7 @@ const Hero = () => {
                     src="/images/tech-city-bg.png"
                     alt="Centro tecnológico futurista"
                     fill
-                    className="object-cover opacity-15 grayscale-[20%] brightness-[0.8]"
+                    className="object-cover opacity-30 brightness-[0.7]"
                     priority
                 />
                 {/* Overlays for legibility & blending */}
