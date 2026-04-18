@@ -35,23 +35,8 @@ const Hero = () => {
     }, []);
 
     return (
-        <section className="relative py-12 md:py-32 overflow-hidden bg-[#0a0a0a]">
-            {/* Background Image Layer */}
-            <div className="absolute inset-0 z-0">
-                <Image
-                    src="/images/tech-city-bg.png"
-                    alt="Centro tecnológico futurista"
-                    fill
-                    className="object-cover opacity-30 brightness-[0.7]"
-                    priority
-                />
-                {/* Overlays for legibility & blending */}
-                <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-transparent to-[#0a0a0a]"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-transparent to-[#0a0a0a] hidden lg:block"></div>
-                <div className="absolute inset-0 bg-black/10"></div>
-            </div>
-
-            <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8">
+        <section className="py-12 md:py-32 overflow-hidden">
+            <div className="max-w-7xl mx-auto px-4 md:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Left Content */}
                     <div className="flex flex-col gap-6 md:gap-8 max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
