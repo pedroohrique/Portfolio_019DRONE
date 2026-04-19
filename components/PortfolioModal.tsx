@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { MapPin, X, MessageSquare, ChevronLeft, ChevronRight } from "lucide-react";
@@ -15,15 +15,26 @@ const PortfolioModal = ({ item, onClose }: ModalProps) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const gallery = item.gallery && item.gallery.length > 0 ? item.gallery : [item.image];
 
-    const prevImage = (e: React.MouseEvent) => {
-        e.stopPropagation();
+    const prevImage = useCallback((e?: React.MouseEvent) => {
+        if (e) e.stopPropagation();
         setCurrentImageIndex((prev) => (prev === 0 ? gallery.length - 1 : prev - 1));
-    };
+    }, [gallery.length]);
 
-    const nextImage = (e: React.MouseEvent) => {
-        e.stopPropagation();
+    const nextImage = useCallback((e?: React.MouseEvent) => {
+        if (e) e.stopPropagation();
         setCurrentImageIndex((prev) => (prev === gallery.length - 1 ? 0 : prev + 1));
-    };
+    }, [gallery.length]);
+
+    // Keyboard navigation
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === "ArrowLeft") prevImage();
+            if (e.key === "ArrowRight") nextImage();
+            if (e.key === "Escape") onClose();
+        };
+        window.addEventListener("keydown", handleKeyDown);
+        return () => window.removeEventListener("keydown", handleKeyDown);
+    }, [nextImage, prevImage, onClose]);
 
     return (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8">
@@ -56,26 +67,41 @@ const PortfolioModal = ({ item, onClose }: ModalProps) => {
                         ></iframe>
                     ) : (
                         <>
-                            <Image
-                                src={gallery[currentImageIndex]}
-                                alt={item.title}
-                                fill
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 60vw"
-                                className="object-contain"
-                            />
+                            <div 
+                                className="relative w-full h-full cursor-pointer group/img"
+                                onClick={() => gallery.length > 1 && nextImage()}
+                            >
+                                <Image
+                                    src={gallery[currentImageIndex]}
+                                    alt={item.title}
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 60vw"
+                                    className="object-contain transition-opacity duration-300"
+                                    priority
+                                />
+                                {gallery.length > 1 && (
+                                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/img:opacity-100 transition-opacity pointer-events-none">
+                                        <div className="bg-black/40 backdrop-blur-sm px-4 py-2 rounded-full text-white text-xs font-bold uppercase tracking-widest">
+                                            Clique para próxima
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
                             {gallery.length > 1 && (
                                 <>
                                     <button
                                         onClick={prevImage}
-                                        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/50 hover:bg-black/80 text-white p-2 rounded-full backdrop-blur-md transition-all"
+                                        className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-black/60 hover:bg-black/90 text-white p-3 md:p-4 rounded-full backdrop-blur-md transition-all border border-white/10 hover:scale-110 active:scale-95"
+                                        aria-label="Imagem anterior"
                                     >
-                                        <ChevronLeft size={24} />
+                                        <ChevronLeft size={28} />
                                     </button>
                                     <button
                                         onClick={nextImage}
-                                        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/50 hover:bg-black/80 text-white p-2 rounded-full backdrop-blur-md transition-all"
+                                        className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-black/60 hover:bg-black/90 text-white p-3 md:p-4 rounded-full backdrop-blur-md transition-all border border-white/10 hover:scale-110 active:scale-95"
+                                        aria-label="Próxima imagem"
                                     >
-                                        <ChevronRight size={24} />
+                                        <ChevronRight size={28} />
                                     </button>
                                     <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20" onClick={(e) => e.stopPropagation()}>
                                         {gallery.map((_, idx) => (
