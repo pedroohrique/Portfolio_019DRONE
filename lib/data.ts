@@ -29,10 +29,10 @@ export const portfolioData: Property[] = [
         gallery: [
             "https://res.cloudinary.com/deazur8hn/image/upload/f_auto,q_auto,w_1600,ar_4:5,c_fill,g_auto/v1776105191/dji_fly_20250901_173530_295_1756758953390_photo_optimized_ytf5c6.jpg",
             "https://res.cloudinary.com/deazur8hn/image/upload/f_auto,q_auto,w_1600,ar_4:5,c_fill,g_auto/v1776105191/dji_fly_20250901_173810_305_1756759099860_photo_optimized_gyiiou.jpg",
-            "https://res.cloudinary.com/deazur8hn/image/upload/f_auto,q_auto,w_1600,ar_4:5,c_fill,g_auto/v1776629287/ktstsvcua3g8dv7y5how.jpg",
+            "https://res.cloudinary.com/deazur8hn/image/upload/f_auto,q_auto,w_1600,ar_4:5,c_fill,g_center/v1776629287/ktstsvcua3g8dv7y5how.jpg",
             "https://res.cloudinary.com/deazur8hn/image/upload/f_auto,q_auto,w_1600,ar_4:5,c_fill,g_auto/v1776105683/DJI_20260310210017_0129_D-2_lhqamp.jpg",
             "https://res.cloudinary.com/deazur8hn/image/upload/f_auto,q_auto,w_1600,ar_4:5,c_fill,g_auto/v1776629220/srd7pw01nce2w9d5qrrm.jpg",
-            "https://res.cloudinary.com/deazur8hn/image/upload/f_auto,q_auto,w_1600,a_-1.5,ar_4:5,c_fill,g_north/v1776629281/jc9b4lgxhrnbymkogvuw.jpg"
+            "https://res.cloudinary.com/deazur8hn/image/upload/f_auto,q_auto,w_1600,a_-2.5,ar_4:5,c_fill,g_north/v1776629281/jc9b4lgxhrnbymkogvuw.jpg"
         ]
     },
     {
