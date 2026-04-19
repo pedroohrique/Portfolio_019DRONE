@@ -36,6 +36,19 @@ const PortfolioModal = ({ item, onClose }: ModalProps) => {
         return () => window.removeEventListener("keydown", handleKeyDown);
     }, [nextImage, prevImage, onClose]);
 
+    // Preload adjacent images
+    useEffect(() => {
+        if (gallery.length <= 1) return;
+        
+        const nextIndex = (currentImageIndex + 1) % gallery.length;
+        const prevIndex = (currentImageIndex - 1 + gallery.length) % gallery.length;
+        
+        [gallery[nextIndex], gallery[prevIndex]].forEach(src => {
+            const img = new (window as any).Image();
+            img.src = src;
+        });
+    }, [currentImageIndex, gallery]);
+
     return (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8">
             {/* Backdrop */}
