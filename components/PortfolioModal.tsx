@@ -89,7 +89,7 @@ const PortfolioModal = ({ item, onClose }: ModalProps) => {
                                     alt={item.title}
                                     fill
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 60vw"
-                                    className="object-contain transition-opacity duration-300"
+                                    className="object-cover transition-opacity duration-300"
                                     priority
                                 />
                                 {gallery.length > 1 && (
