@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '@/components/Navbar';
+import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata = {
@@ -10,7 +10,7 @@ export const metadata = {
 export default function PoliticaPrivacidade() {
   return (
     <main className="min-h-screen bg-[#050505] text-white">
-      <Navbar />
+      <Header />
       <div className="pt-32 pb-24 px-4 md:px-8 max-w-4xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold mb-12">Política de Privacidade</h1>
         
