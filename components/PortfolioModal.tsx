@@ -25,7 +25,7 @@ const PortfolioModal = ({ item, onClose }: ModalProps) => {
         setCurrentImageIndex((prev) => (prev === gallery.length - 1 ? 0 : prev + 1));
     }, [gallery.length]);
 
-    // Keyboard navigation
+    // Keyboard navigation e Body Scroll Lock
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
             if (e.key === "ArrowLeft") prevImage();
@@ -33,7 +33,15 @@ const PortfolioModal = ({ item, onClose }: ModalProps) => {
             if (e.key === "Escape") onClose();
         };
         window.addEventListener("keydown", handleKeyDown);
-        return () => window.removeEventListener("keydown", handleKeyDown);
+        
+        // Lock body scroll
+        document.body.style.overflow = "hidden";
+        
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown);
+            // Restore body scroll
+            document.body.style.overflow = "unset";
+        };
     }, [nextImage, prevImage, onClose]);
 
     // Preload adjacent images

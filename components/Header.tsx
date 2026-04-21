@@ -78,27 +78,34 @@ const Header = () => {
 
             {/* Mobile Menu */}
             {isMenuOpen && (
-                <div className="md:hidden absolute top-full left-0 right-0 bg-[#0a0a0a]/95 backdrop-blur-xl border-t border-white/5 shadow-2xl py-8 px-6 flex flex-col gap-2 animate-in fade-in slide-in-from-top-4 duration-300">
-                    {navLinks.map((link) => (
-                        <Link
-                            key={link.name}
-                            href={link.href}
-                            onClick={() => setIsMenuOpen(false)}
-                            className={`text-xl font-bold py-4 px-6 rounded-2xl transition-all active:scale-95 ${isActive(link.href) ? "bg-blue-600/10 text-blue-500" : "text-gray-300 active:bg-white/5"}`}
-                        >
-                            {link.name}
-                        </Link>
-                    ))}
-                    <Link
-                        href="https://wa.me/5519994411529"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                <>
+                    <div 
+                        className="fixed inset-0 top-[70px] bg-black/50 backdrop-blur-sm z-40 md:hidden animate-in fade-in duration-300"
                         onClick={() => setIsMenuOpen(false)}
-                        className="mt-6 bg-green-600 hover:bg-green-700 text-white text-center py-5 rounded-2xl text-xl font-black shadow-xl shadow-green-900/20 active:scale-95 transition-all"
-                    >
-                        SOLICITAR ORÇAMENTO
-                    </Link>
-                </div>
+                        aria-hidden="true"
+                    />
+                    <div className="md:hidden absolute top-full left-0 right-0 bg-[#0a0a0a]/95 backdrop-blur-xl border-t border-white/5 shadow-2xl py-8 px-6 flex flex-col gap-2 animate-in fade-in slide-in-from-top-4 duration-300 z-50">
+                        {navLinks.map((link) => (
+                            <Link
+                                key={link.name}
+                                href={link.href}
+                                onClick={() => setIsMenuOpen(false)}
+                                className={`text-xl font-bold py-4 px-6 rounded-2xl transition-all active:scale-95 ${isActive(link.href) ? "bg-blue-600/10 text-blue-500" : "text-gray-300 active:bg-white/5"}`}
+                            >
+                                {link.name}
+                            </Link>
+                        ))}
+                        <Link
+                            href="https://wa.me/5519994411529"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={() => setIsMenuOpen(false)}
+                            className="mt-6 bg-green-600 hover:bg-green-700 text-white text-center py-5 rounded-2xl text-xl font-black shadow-xl shadow-green-900/20 active:scale-95 transition-all"
+                        >
+                            SOLICITAR ORÇAMENTO
+                        </Link>
+                    </div>
+                </>
             )}
         </header>
     );
