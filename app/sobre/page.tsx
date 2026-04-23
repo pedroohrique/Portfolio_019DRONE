@@ -19,6 +19,7 @@ const SobrePage = () => {
                         src="/images/about-drone.png" 
                         alt="Drone Background" 
                         fill 
+                        quality={100}
                         className="object-cover opacity-40"
                         priority
                     />
